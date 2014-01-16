@@ -1,0 +1,18 @@
+name := "Testing Scala" 
+
+version := "1.0"
+
+scalaVersion := "2.9.0-1"
+
+resolvers ++= Seq("snapshots" at "http://scala-tools.org/repo-snapshots",
+                  "releases"  at "http://scala-tools.org/repo-releases")
+
+libraryDependencies ++= Seq("org.scalatest" % "scalatest_2.9.0-1" % "1.6.1" % "test" withSources() withJavadoc(),
+                            "joda-time" % "joda-time" % "1.6.2" withSources() withJavadoc(),
+                            "junit" % "junit" % "4.10" withSources() withJavadoc(),
+                            "org.testng" % "testng" % "6.1.1" % "test" withSources() withJavadoc(),
+                            "org.specs2" %% "specs2" % "1.6.1" withSources() withJavadoc(),
+                            "org.specs2" %% "specs2-scalaz-core" % "6.0.RC2" % "test" withSources(),
+                            "org.easymock" % "easymock" % "3.1" % "test" withSources() withJavadoc(),
+                            "org.mockito" % "mockito-core" % "1.9.0" % "test" withSources() withJavadoc(),
+                            "org.scala-tools.testing" %% "scalacheck" % "1.9" % "test" withSources() withJavadoc())
